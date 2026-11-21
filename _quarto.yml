@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - "chapters/*.ipynb"
+    - next-games.qmd
+
+website:
+  title: "Настольные игры. Простые стратегии и их пределы"
+  page-navigation: true
+  sidebar:
+    style: docked
+    contents:
+      - href: index.qmd
+        text: "О проекте"
+      - auto: "chapters/*.ipynb"
+      - href: next-games.qmd
+        text: "Следующая игра"
+
+lang: ru
+execute:
+  enabled: false
+format:
+  html:
+    toc: true
+    code-fold: true
